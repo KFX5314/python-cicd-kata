@@ -14,5 +14,10 @@ repos:
   - id: ruff-format
     name: ruff format
     description: "Run 'ruff format' for extremely fast Python formatting"
-    entry: uv run ruff check .
+    entry: ruff format --force-exclude
     language: python
+    types: [python]
+    args: []
+    require_serial: true
+    additional_dependencies: []
+    minimum_pre_commit_version: "2.9.2"
