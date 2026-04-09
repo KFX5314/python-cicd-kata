@@ -7,3 +7,12 @@ repos:
   - id: check-yaml          # Verifica la sintaxis YAML
   - id: check-json          # Verifica la sintaxis JSON
   - id: check-case-conflict
+
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.15.9
+  hooks:
+  - id: ruff-format
+    name: ruff format
+    description: "Run 'ruff format' for extremely fast Python formatting"
+    entry: uv run ruff check .
+    language: python
