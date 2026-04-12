@@ -77,7 +77,7 @@ Linux
 PYTHONPATH=app uv run uvicorn main:app --port 8000 --reload
 Windows
 $env:PYTHONPATH="app"
-uv run uvicorn main:app --port 8000 --reloadPYTHONPATH
+uv run uvicorn main:app --port 8000 --reload
 ```
 
 ## Code quality
