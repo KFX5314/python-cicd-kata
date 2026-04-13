@@ -72,8 +72,17 @@ uv remove (--group dev) <package_name>
 
 Run the application:
 
+Linux:
+
 ```sh
 PYTHONPATH=app uv run uvicorn main:app --port 8000 --reload
+```
+
+Windows:
+
+```powershell
+$env:PYTHONPATH="app"
+uv run uvicorn main:app --port 8000 --reload
 ```
 
 ## Code quality
