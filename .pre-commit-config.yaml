@@ -16,3 +16,11 @@ repos:
     description: "Run 'ruff format' for extremely fast Python formatting"
     entry: uv run ruff check .
     language: python
+
+- repo: local
+  hooks:
+  - id: pytest
+    name: pytest
+    entry: uv run pytest
+    language: system
+    pass_filenames: false
