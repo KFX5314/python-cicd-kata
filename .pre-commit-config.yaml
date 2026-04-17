@@ -11,9 +11,11 @@ repos:
 - repo: https://github.com/astral-sh/ruff-pre-commit
   rev: v0.15.9
   hooks:
+  - id: ruff-check
+    name: ruff lint
+    args: [ --fix ]
   - id: ruff-format
     name: ruff format
-    description: "Run 'ruff format' for extremely fast Python formatting"
     entry: ruff format --force-exclude
     language: python
     types: [python]
@@ -21,3 +23,14 @@ repos:
     require_serial: true
     additional_dependencies: []
     minimum_pre_commit_version: "2.9.2"
+
+- repo: local
+  hooks:
+  - id: static-type-check
+    name: Static Type Check
+    entry: uv run pyright
+    language: python
+  - id: test
+    name: Run Tests
+    entry: uv run pytest
+    language: python
